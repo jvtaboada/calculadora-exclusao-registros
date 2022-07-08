@@ -5,29 +5,62 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Calculadora da velocidade de registros</title>
+        <link rel="stylesheet" href="/css/reset.css">
+
+        <!-- font import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet"> 
+
+        <title>Calculadora - Exclusão de Registros (reg/s)</title>
+
+        <link rel="icon" type="imagem/png" href="/assets/icon/calculadora-icone.png">
+
+        <link rel="stylesheet" href="/css/full-page.css">
+        <link rel="stylesheet" href="/css/main-component.css">
+
+        <link rel="stylesheet" href="/css/main-title.css">
+        <link rel="stylesheet" href="/css/main-subtitle.css">
+        
+
     </head>
 
-    <body style="margin-left: 40px">
-        <h1>Calculadora de velocidade de exclusão de registros</h1>
-        <h2><i>Limpeza dos dados de DataPing na logparametros</i></h2>
+    <body>
+        <div class="full-page">
+            <header>
+                <h1 class="main-title">Calculadora de velocidade de exclusão de registros</h1>
+                <h2 class="main-subtitle"><i>Limpeza dos dados de DataPing na logparametros</i></h2>
+            </header>
 
-        Horário de ínicio <input type="text" id="horaInicio" value="0">h : <input type="text" id="minInicio">min <br>
-        Horário de término <input type="text" id="horaFinal" value="0">h : <input type="text" id="minFinal">min
+            <div class="main-component">
+                <div class="time">
+                    <div>
+                        Horário de ínicio <input class="box" type="text" id="horaInicio" placeholder="00-23">h :<input class="box" type="text" id="minInicio" placeholder="00-59">min
+                    </div>
+                    <div >
+                        Horário de término <input class="box" type="text" id="horaFinal" placeholder="00-23">h :<input class="box" type="text" id="minFinal" placeholder="00-59">min
+                    </div>
+                </div>
+                
+                <div class="quantity">
+                    <div>
+                        Quantidade de registros no ínicio <input class="box" type="text" id="regInicio" placeholder="0">
+                    </div>
+                    <div>
+                        Quantidade de registros no final <input class="box" type="text" id="regFinal" placeholder="0">
+                    </div>
+                </div>
 
-        <br><br> 
+                <div class="bu">
+                    <input class="button" type="button" value="Calcular" id="btn">
+                </div>
 
-        Quantidade de registros no ínicio <input type="text" id="regInicio" value="0"><br>
-        Quantidade de registros no final <input type="text" id="regFinal" value="0">
+                <div class="result">
+                    Resultado: ~<input class="box" type="text" id="res" readonly>  reg/s
+                </div>
+            </div>
+        </div>
 
-        <br><br>
-
-        <input type="button" value="Calcular velocidade" id="btn">
-
-        <br><br>
-
-        Resultado: <input type="text" id="res" value="0" readonly> registros deletados por segundo.
-        
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script>
         <script src="funcoes.js"></script>
     </body>
