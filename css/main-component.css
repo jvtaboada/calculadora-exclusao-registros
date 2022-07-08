@@ -13,18 +13,33 @@
     padding: 15px; 
 }
 
-.box{
-    width: 45px;
+.inputs{
+    width: 55px;
 
     margin-left: 10px;
     margin-right: 3px;
 }
 
+.inputs.hour{
+    width: 35px;
+}
+.inputs.reg{
+    width: 60px;
+
+    margin-right: none;
+}
+
+.inputs.velocity{
+    margin-left: none;
+    margin-right: 8px;
+}
+
+
 .quantity{
     margin-top: 10px;
 }
 
-.inputs{
+.lines{
     display: flex;
     justify-content: flex-end;
 
