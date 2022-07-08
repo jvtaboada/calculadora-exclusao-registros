@@ -24,26 +24,6 @@
     margin-top: 10px;
 }
 
-.button{
-    margin-top: 10px;
-
-    font-size: 20px;
-
-    border-radius: 3px;
-    width: 80px;
-    height: 30px;
-    
-    cursor: pointer;
-
-    background-color: #ffb142;
-    border: 2px solid #FFF;
-}
-
-.button:hover{
-    background-color: #000;
-    color: #ffb142;
-}
-
 .inputs{
     display: flex;
     justify-content: flex-end;
@@ -56,6 +36,3 @@
 
     margin-top: 40px;
 }
-
-
-/*BOTAO E RESULTADO DAS MESAS CORES*/
