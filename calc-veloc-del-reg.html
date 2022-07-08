@@ -33,30 +33,30 @@
             </header>
 
             <div class="main-component">
-                <div class="time">
-                    <div>
-                        Horário de ínicio <input class="box" type="text" id="horaInicio" placeholder="00-23">h :<input class="box" type="text" id="minInicio" placeholder="00-59">min
+                    <div class="time">
+                        <div class="inputs">
+                            Horário de ínicio <input class="box" type="text" id="horaInicio" placeholder="00-23">h :<input class="box" type="text" id="minInicio" placeholder="00-59">min
+                        </div>
+                        <div class="inputs">
+                            Horário de término <input class="box" type="text" id="horaFinal" placeholder="00-23">h :<input class="box" type="text" id="minFinal" placeholder="00-59">min
+                        </div>
                     </div>
-                    <div >
-                        Horário de término <input class="box" type="text" id="horaFinal" placeholder="00-23">h :<input class="box" type="text" id="minFinal" placeholder="00-59">min
+                    
+                    <div class="quantity">
+                        <div class="inputs">
+                            Quantidade de registros no ínicio <input class="box" type="text" id="regInicio" placeholder="0">
+                        </div>
+                        <div class="inputs">
+                            Quantidade de registros no final <input class="box" type="text" id="regFinal" placeholder="0">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="quantity">
-                    <div>
-                        Quantidade de registros no ínicio <input class="box" type="text" id="regInicio" placeholder="0">
-                    </div>
-                    <div>
-                        Quantidade de registros no final <input class="box" type="text" id="regFinal" placeholder="0">
-                    </div>
-                </div>
 
                 <div class="bu">
                     <input class="button" type="button" value="Calcular" id="btn">
                 </div>
 
                 <div class="result">
-                    Resultado: ~<input class="box" type="text" id="res" readonly>  reg/s
+                    Resultado: ~<input class="box" type="text" id="res" readonly>reg/s
                 </div>
             </div>
         </div>
