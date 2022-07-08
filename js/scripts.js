@@ -1,5 +1,3 @@
-let agora = moment();
-
 //trazendo o botão para utilizar o event listener no click
 let button = document.getElementById("btn");
 
@@ -14,29 +12,32 @@ let horaInicio = document.getElementById("horaInicio");
 let minFinal = document.getElementById("minFinal");
 let minInicio = document.getElementById("minInicio");
 
-let inicio; 
-let final;
-let ms;
-let d;
-
-//registros: valor, inicio e fim
+//registros: QTD REGISTROS, inicio e fim
 let regFinal = document.getElementById("regFinal");
 let regInicio = document.getElementById("regInicio");
 
-//declarando variaveis para o cálculo
+
+//declarando variaveis que serão usadas em diversas funções
 let tempoIntervalo; //em minuto
 let regIntervalo;
 
-button.addEventListener("click", function func_calcVelocidade(){
-    console.log("teste do botao 1");
+button.addEventListener("click", function func_confereInput(){
+    if( (horaFinal.value === "") || (minFinal.value === "") || (horaInicio.value === "") || (minInicio.value === "") || (regInicio.value === "") || (regFinal.value === "")  ){
+        alert('Atenção! Algum campo não foi preenchido!');
+    }
+    else{
+        func_calcVelocidade();
+    }
+});
+
+function func_calcVelocidade(){
     func_tempoIntervalo();
     func_regIntervalo();
 
     result.value = (regIntervalo / tempoIntervalo) / 60;
-});
+}
 
 function func_tempoIntervalo (){
-    console.log("teste do botao 2");
     if(horaFinal.value === horaInicio.value){
         tempoIntervalo = minFinal.value - minInicio.value;
     }
@@ -50,12 +51,11 @@ function func_regIntervalo (){
 }
 
 function func_difHoras(){
-    console.log("teste da func dif horas");
+    let inicio = horaInicio.value + ':' + minInicio.value;
+    let final = horaFinal.value + ':' + minFinal.value;
 
-    inicio = horaInicio.value + ':' + minInicio.value;
-    final = horaFinal.value + ':' + minFinal.value;
+    let ms = moment(final,"HH:mm").diff(moment(inicio,"HH:mm"));
+    let d = moment.duration(ms);
 
-    ms = moment(final,"HH:mm").diff(moment(inicio,"HH:mm"));
-    d = moment.duration(ms);
     tempoIntervalo = d.asMinutes();
 }
