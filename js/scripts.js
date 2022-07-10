@@ -34,7 +34,9 @@ function func_calcVelocidade(){
     func_tempoIntervalo();
     func_regIntervalo();
 
-    result.value = (regIntervalo / tempoIntervalo) / 60;
+    let aux =  (regIntervalo / tempoIntervalo) / 60;
+
+    result.value = aux.toFixed(2);
 }
 
 function func_tempoIntervalo (){
