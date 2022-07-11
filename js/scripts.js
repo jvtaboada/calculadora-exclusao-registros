@@ -27,11 +27,15 @@ button.addEventListener("click", function func_confereInput(){
         alert('Atenção! Algum campo não foi preenchido!');
     }
     else{
+        func_mudarDisplay();
         func_calcVelocidade();
         func_tempoRestante();
     }
 });
 
+function func_mudarDisplay(){
+    document.getElementById("componentResultado").style.display= 'flex';
+}
 
 function func_calcVelocidade(){
     func_tempoIntervalo();
