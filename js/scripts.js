@@ -3,6 +3,7 @@ let button = document.getElementById("btn");
 
 //res é o que vai alterar o input de resultado no doc HTML
 let result = document.getElementById("res");
+let tempoFalta = document.getElementById("tempoFalta");
 
 //Trazendo pro doc JS os valores recebidos no doc HTML
 //horario: HORA e MIN, inicio e fim
@@ -27,8 +28,10 @@ button.addEventListener("click", function func_confereInput(){
     }
     else{
         func_calcVelocidade();
+        func_tempoRestante();
     }
 });
+
 
 function func_calcVelocidade(){
     func_tempoIntervalo();
@@ -36,7 +39,18 @@ function func_calcVelocidade(){
 
     let aux =  (regIntervalo / tempoIntervalo) / 60;
 
-    result.value = aux.toFixed(2);
+    result.value = aux.toFixed();
+}
+
+function func_tempoRestante(){
+    //result.value É A VELOCIDADE EXCLUIR REG POR SEGUNDO
+    //regFinal.value É O Nº DE REGISTROS QUE FALTA ATUALMENTE
+
+    let velocMin = result.value * 60;
+
+    let timeRem= (regFinal.value / velocMin);
+
+    tempoFalta.value = timeRem.toFixed();
 }
 
 function func_tempoIntervalo (){

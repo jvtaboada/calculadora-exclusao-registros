@@ -13,6 +13,10 @@
     padding: 15px; 
 }
 
+.main-component.calculate{
+    margin-top: 15px;
+}
+
 .inputs{
     width: 55px;
 
@@ -29,11 +33,11 @@
     margin-right: none;
 }
 
-.inputs.velocity{
+.inputs.done{
     margin-left: none;
     margin-right: 8px;
+    width: 35px;
 }
-
 
 .quantity{
     margin-top: 10px;
@@ -49,5 +53,9 @@
 .result{
     display: flex;
 
-    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.remaining{
+    display: flex;
 }
