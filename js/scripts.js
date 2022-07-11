@@ -47,9 +47,6 @@ function func_calcVelocidade(){
 }
 
 function func_tempoRestante(){
-    //result.value É A VELOCIDADE EXCLUIR REG POR SEGUNDO
-    //regFinal.value É O Nº DE REGISTROS QUE FALTA ATUALMENTE
-
     let velocMin = result.value * 60;
 
     let timeRem= (regFinal.value / velocMin);

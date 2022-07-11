@@ -16,57 +16,60 @@
 
         <link rel="icon" type="imagem/png" href="./assets/icon/calculadora-icone.png">
 
-        <link rel="stylesheet" href="./css/full-page.css">
+        <link rel="stylesheet" href="./css/components/full-page.css">
 
-        <link rel="stylesheet" href="./css/main-title.css">
-        <link rel="stylesheet" href="./css/main-subtitle.css">
+        <link rel="stylesheet" href="./css/components/main-title.css">
+        <link rel="stylesheet" href="./css/components/main-subtitle.css">
 
-        <link rel="stylesheet" href="./css/main-component.css">
-        <link rel="stylesheet" href="./css/main-button.css">
+        <link rel="stylesheet" href="./css/components/main-component.css">
+        <link rel="stylesheet" href="./css/components/main-button.css">
     </head>
 
     <body>
         <div class="full-page">
-            <header>
-                <h1 class="main-title">Calculadora de velocidade de exclusão de registros</h1>
-                <h2 class="main-subtitle"><i>Limpeza dos dados de DataPing na logparametros</i></h2>
-            </header>
+                <header>
+                    <h1 class="main-title">Calculadora - Velocidade de Exclusão de Registros</h1>
+                    <h2 class="main-subtitle"><i>Limpeza dos dados de DataPing na logparametros</i></h2>
+                </header>
 
-            <div class="main-component">
-                    <div class="time">
-                        <div class="lines">
-                            Horário de ínicio <input class="inputs hour" type="text" id="horaInicio" placeholder="00-23">h :<input class="inputs hour" type="text" id="minInicio" placeholder="00-59">min
+                <div class="main-component">
+                        <div class="time">
+                            <div class="lines">
+                                Horário de ínicio <input class="inputs hour" type="text" id="horaInicio" placeholder="00-23">h :<input class="inputs hour" type="text" id="minInicio" placeholder="00-59">min
+                            </div>
+                            <div class="lines">
+                                Horário de término <input class="inputs hour" type="text" id="horaFinal" placeholder="00-23">h :<input class="inputs hour" type="text" id="minFinal" placeholder="00-59">min
+                            </div>
                         </div>
-                        <div class="lines">
-                            Horário de término <input class="inputs hour" type="text" id="horaFinal" placeholder="00-23">h :<input class="inputs hour" type="text" id="minFinal" placeholder="00-59">min
+                        
+                        <div class="quantity">
+                            <div class="lines">
+                                Quantidade de registros no ínicio <input class="inputs reg" type="text" id="regInicio" placeholder="0">
+                            </div>
+                            <div class="lines">
+                                Quantidade de registros no final <input class="inputs reg" type="text" id="regFinal" placeholder="0">
+                            </div>
                         </div>
+
+                    <div>
+                        <input class="main-button" type="button" value="Calcular" id="btn">
                     </div>
-                    
-                    <div class="quantity">
-                        <div class="lines">
-                            Quantidade de registros no ínicio <input class="inputs reg" type="text" id="regInicio" placeholder="0">
-                        </div>
-                        <div class="lines">
-                            Quantidade de registros no final <input class="inputs reg" type="text" id="regFinal" placeholder="0">
-                        </div>
+                </div>
+
+                <div id="componentResultado" class="main-component calculate">
+                    <div class="result">
+                        Excluindo ~<input class="inputs done" type="text" id="res" readonly>reg/s
                     </div>
 
-                <div>
-                    <input class="main-button" type="button" value="Calcular" id="btn">
+                    <div class="remaining">
+                        A procedure será finalizada em ~<input class="inputs done" type="text" id="tempoFalta" readonly>minutos
+                    </div>
                 </div>
+            </section>
 
-                
-            </div>
-
-            <div id="componentResultado" class="main-component calculate">
-                <div class="result">
-                    Excluindo ~<input class="inputs done" type="text" id="res" readonly>reg/s
-                </div>
-
-                <div class="remaining">
-                    A procedure será finalizada em ~<input class="inputs done" type="text" id="tempoFalta" readonly>minutos
-                </div>
-            </div>
+            <footer class="main-footer">
+                v1.0.0 - Jvtaboada, Inc.
+            </footer>
         </div>
 
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script>
