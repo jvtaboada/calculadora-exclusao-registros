@@ -16,3 +16,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.main-footer{
+    margin-top: 200px;
+    color: #808080;
+}
